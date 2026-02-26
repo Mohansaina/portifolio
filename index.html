@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
     <!-- Header & Navigation -->
     <header>
         <div class="container">
@@ -42,24 +44,40 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="hero-badge"><span class="dot"></span> Available for Freelance</div>
                     <h4>Hello, I'm</h4>
                     <h1>Mohan Ruttala</h1>
-                    <h2>Full Stack Developer</h2>
+                    <h2 class="typewriter-text"><span id="typewriter"></span><span class="cursor">|</span></h2>
                     <p>I create beautiful, functional, and user-centered digital experiences that solve real-world problems in Visakhapatnam and beyond.</p>
                     <div class="hero-btns">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                    </div>
+                    <div class="hero-tech">
+                        <span><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span><i class="fab fa-react"></i> React</span>
+                        <span><i class="fab fa-node-js"></i> Node.js</span>
+                        <span><i class="fab fa-python"></i> Python</span>
                     </div>
                 </div>
                 <div class="hero-img">
+                    <div class="profile-border"></div>
                     <div class="profile-image">
                         <img src="myprofile.jpg" alt="Mohan Ruttala">
                     </div>
+                    <div class="hero-glow"></div>
                 </div>
             </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <div class="hero-scroll-line"></div>
         </div>
     </section>
 
@@ -95,7 +113,21 @@
                             <p>Available for freelance</p>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary">Download CV</a>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="3">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download CV</a>
                 </div>
             </div>
         </div>
@@ -264,14 +296,14 @@
                     <h3>Contact Information</h3>
                     <p>Feel free to reach out to me for collaborations, job opportunities, or just to say hello!</p>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
                             <p>ruttalamohan23@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Location</h4>
                             <p>Visakhapatnam, Andhra Pradesh, India</p>
@@ -318,6 +350,10 @@
             </div>
         </div>
     </footer>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span>Message sent successfully!</span></div>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
     <script src="script.js"></script>
 </body>
